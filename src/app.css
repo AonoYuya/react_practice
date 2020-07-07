@@ -1,0 +1,38 @@
+.app{
+  margin: 24px;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+}
+
+.textfield{
+  width: 100%;
+}
+
+.ul_tag{
+  /* border: 1px solid; */
+  margin-top: 50px !important;
+}
+
+.input_area{
+  display: flex;
+}
+
+.input_area p {
+  margin-left: 50px;
+}
+
+.li_tag {
+  border: 1px solid;
+  margin-bottom: 5px;
+}
+
+.input_area_first {
+  display: flex;
+}
+
+.input_area_first p{
+  margin-left: 24px;
+}

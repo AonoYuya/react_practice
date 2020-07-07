@@ -5,11 +5,14 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 function TodoList(props){
   return (
-    <List>
+    <List className="ul_tag">
+      <ListItem className="li_tag">
+        <ListItemText primary="番号" secondary="内容" className="input_area_first"/>
+      </ListItem>
       {
         props.list.map((item,i) => (
-          <ListItem key={i}>
-            <ListItemText primary={item} />
+          <ListItem key={i} className="li_tag">
+            <ListItemText primary={i} secondary={item} className="input_area"/>
           </ListItem>
         ))
       }

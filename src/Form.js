@@ -1,15 +1,17 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import './app.css';
 
 function Form(props){
   return (
-    <form onSubmit={props.handleSubmit}>
+    <form onSubmit={props.handleSubmit} className="form">
       <TextField
         name="value"
         label="やること"
         value={props.value}
         onChange={props.handleChange}
+        className="textfield"
       />
       <Button
         type="submit"
