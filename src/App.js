@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './TodoList';
 import Form from './Form';
+import Modal from './Modal';
 import './app.css';
 
 class App extends React.Component {
@@ -28,6 +29,15 @@ class App extends React.Component {
       value: '',
     });
   }
+  handleClick = (event) => {
+    let selectNumber = "";
+    if (event.target.getAttribute('class') == "MuiButton-label") {
+      selectNumber = event.target.parentNode.getAttribute('data-number');
+    }else {
+      selectNumber = event.target.getAttribute('data-number');
+    }
+    console.log(selectNumber);
+  }
   render() {
     return (
       <div className="app">
@@ -37,7 +47,11 @@ class App extends React.Component {
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
         />
-        <TodoList list={this.state.list} />
+        <TodoList
+          list={this.state.list}
+          handleClick={this.handleClick}
+        />
+        <Modal />
       </div>
     );
   }
